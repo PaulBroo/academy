@@ -25,4 +25,5 @@ runs:
         fi
         
         echo "DOCKER_IMAGE_NAME=${{inputs.image_name}}" >> $GITHUB_ENV
+        docker push paulomano147/day3:${{ inputs.tag_name }}
       shell: bash
