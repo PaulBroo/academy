@@ -1,17 +1,9 @@
-name: docker_action
-description: multiple actions
+name: docker_push
+description: push image to docker_hub
 inputs:
-  path_dockerfile:
-    description: Path of the dockerfile
-    required: false
-    default: "Dockerfile"
-  image_name:
+  docker_image:
     description: Name of the image
     required: true
-    default: "default"
-  tag_name:
-    description: Name of the tag
-    required: false
     default: "default"
 
 runs:
@@ -23,5 +15,5 @@ runs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     - name: Push image
-      run: docker push paulomano147/day3:tagname
+      run: docker push paulomano147/${{inputs.docker_image}}
       shell: bash

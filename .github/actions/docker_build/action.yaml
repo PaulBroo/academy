@@ -1,5 +1,19 @@
-name: docker_push
-description: push image to docker_hub
+name: docker_action
+description: multiple actions
+inputs:
+  path_dockerfile:
+    description: Path of the dockerfile
+    required: false
+    default: "Dockerfile"
+  image_name:
+    description: Name of the image
+    required: true
+    default: "default"
+  tag_name:
+    description: Name of the tag
+    required: false
+    default: "default"
+
 runs:
   using: composite
   steps:
@@ -7,7 +21,8 @@ runs:
         if [ -z "${{ inputs.tag_name }}" ]; then
           docker build . --file ${{inputs.path_dockerfile}} --tag $(date +%s)
         else
-          docker build . --file ${{inputs.path_dockerfile}} --tag ${{ inputs.tag_name }}:$(date +%s)
+          docker build . --file ${{inputs.path_dockerfile}} --tag ${{ inputs.tag_name }}
         fi
-        echo "DOCKER_IMAGE_NAME=${{inputs.image_name}}" >> $GITHUB_ENV
+        echo "DOCKER_IMAGE_NAME=day3:${{ inputs.tag_name }}" >> $GITHUB_ENV
+        docker image tag ${{ inputs.tag_name }} ${!DOCKER_IMAGE_NAME}
       shell: bash

@@ -20,4 +20,6 @@ jobs:
         image_name: ubuntu
         tag_name: finalcicd
     - uses: PaulBroo/academy/.github/actions/docker_push@main
+      with:
+        docker_image: DOCKER_IMAGE_NAME
 
