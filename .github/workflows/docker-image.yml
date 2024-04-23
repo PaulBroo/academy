@@ -20,7 +20,4 @@ jobs:
         image_name: ubuntu
         tag_name: finalcicd
     - uses: PaulBroo/academy/.github/actions/docker_push@main
-      with:
-        username: ${{ secrets.DOCKERHUB_USERNAME }}
-        password: ${{ secrets.DOCKERHUB_TOKEN }}
 
