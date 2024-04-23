@@ -24,3 +24,4 @@ runs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     - name: Push image
       run: docker push paulomano147/day3:tagname
+      shell: bash
