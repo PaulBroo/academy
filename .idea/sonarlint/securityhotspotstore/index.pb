@@ -10,3 +10,5 @@ R
 ".github/workflows/docker-image.yml,a\9\a9559c5bf0b777abb52ef983bf739d20d32d0a24
 X
 (.github/actions/docker_build/action.yaml,6\4\641780a88ffd04bd19c3480605d87ca480c0b9fe
+W
+'.github/actions/docker_push/action.yaml,b\7\b7bf0c83847fa328956679ae1733b8f9f75e1301
