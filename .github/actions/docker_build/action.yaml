@@ -1,14 +1,5 @@
 name: docker_action
 description: multiple actions
-inputs:
-  #gitUser:
-   # description: Git username
-    #required: true
-    #default: "default"
-  #gitRepo:
-   # description: Git repository
-   # required: true
-   # default: "default"
 runs:
   using: composite
   steps:
