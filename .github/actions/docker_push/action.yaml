@@ -22,3 +22,5 @@ runs:
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
+    - name: Push image
+      run: docker push paulomano147/day3:tagname
