@@ -8,3 +8,5 @@ B
 Dockerfile,6\6\6651ddff6eb82c840ced7c1dddee15c6e1913dd4
 R
 ".github/workflows/docker-image.yml,a\9\a9559c5bf0b777abb52ef983bf739d20d32d0a24
+X
+(.github/actions/docker_build/action.yaml,6\4\641780a88ffd04bd19c3480605d87ca480c0b9fe
