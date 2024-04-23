@@ -26,5 +26,5 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     - uses: PaulBroo/academy/.github/actions/docker_push@main
       with:
-        docker_image: ${!DOCKER_IMAGE_NAME}
+        docker_image: ${{env.DOCKER_IMAGE_NAME}}
 
