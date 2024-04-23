@@ -21,7 +21,7 @@ runs:
         if [ -z "${{ inputs.tag_name }}" ]; then
           docker build . --file ${{inputs.path_dockerfile}} --tag $(date +%s)
         else
-          docker build . --file ${{inputs.path_dockerfile}} --tag day3:${{ inputs.tag_name }}:latest
+          docker build . --file ${{inputs.path_dockerfile}} --tag day3:${{ inputs.tag_name }}
         fi
         echo "DOCKER_IMAGE_NAME=day3:${{ inputs.tag_name }}" >> $GITHUB_ENV
         docker image ls 
