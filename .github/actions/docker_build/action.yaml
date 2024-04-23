@@ -25,4 +25,5 @@ runs:
         fi
         echo "DOCKER_IMAGE_NAME=day3:${{ inputs.tag_name }}" >> $GITHUB_ENV
         docker image ls 
+        docker tag day3 day3:tag
       shell: bash
