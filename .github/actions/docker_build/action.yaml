@@ -19,10 +19,10 @@ runs:
   steps:
     - run: |
         if [ -z "${{ inputs.tag_name }}" ]; then
-          docker build . --file ${{input.path_dockerfile}} --tag $(date +%s)
+          docker build . --file ${{inputs.path_dockerfile}} --tag $(date +%s)
         else
-          docker build . --file ${{input.path_dockerfile}} --tag ${{ inputs.tag_name }}:$(date +%s)
+          docker build . --file ${{inputs.path_dockerfile}} --tag ${{ inputs.tag_name }}:$(date +%s)
         fi
         
-        echo "DOCKER_IMAGE_NAME=${{input.image_name}}" >> $GITHUB_ENV
+        echo "DOCKER_IMAGE_NAME=${{inputs.image_name}}" >> $GITHUB_ENV
       shell: bash
