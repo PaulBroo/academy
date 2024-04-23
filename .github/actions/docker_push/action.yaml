@@ -23,6 +23,5 @@ runs:
         else
           docker build . --file ${{inputs.path_dockerfile}} --tag ${{ inputs.tag_name }}:$(date +%s)
         fi
-        
         echo "DOCKER_IMAGE_NAME=${{inputs.image_name}}" >> $GITHUB_ENV
       shell: bash
